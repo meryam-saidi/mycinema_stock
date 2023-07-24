@@ -1,0 +1,3 @@
+index:
+    path: /front
+    controller: App\Controller\HomeController::front
