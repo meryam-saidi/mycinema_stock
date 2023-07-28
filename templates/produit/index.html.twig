@@ -154,7 +154,7 @@
 									{% for produit in produits %}
 										<tr>
 											<td><img class="img-fluid" src="{{ asset("pop_suc.jpg") }}" alt="" weidth="30px" height="45px"></td>
-											<td>{{ produit.barcode | upper }}</td>
+											<td>{{ produit.code | upper }}</td>
 											<td>{{ produit.productname }}</td>
 											<td>{{ produit.purchaseprice }}</td>
 											<td>{{ produit.etat }}</td>
