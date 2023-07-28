@@ -54,43 +54,43 @@
 
 {% block changeMe %}
 	{#
-												<div class="container-fluid">
-													<div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-														<div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-															<div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
-																{% if produit is not null %}
-																	<p>Image:
-																		<img class="img-fluid h-100" src="{{ asset("pop_Suc.jpg") }}" alt=""></p>
-																	<hr>
-																	<h3>{{ produit.productname }}</h3>
-																	<p>Barcode:
-																		{{ produit.barcode }}</p>
-																	<p>Catégorie:
-																		{{ produit.getCategorie.nom }}</p>
-																	<p>Prix:
-																		{{ produit.purchaseprice }}</p>
-																	{% if produit.etat is not null %}
-																		<p>Etat: En Stock</p>
+													<div class="container-fluid">
+														<div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+															<div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+																<div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
+																	{% if produit is not null %}
+																		<p>Image:
+																			<img class="img-fluid h-100" src="{{ asset("pop_Suc.jpg") }}" alt=""></p>
+																		<hr>
+																		<h3>{{ produit.productname }}</h3>
+																		<p>Barcode:
+																			{{ produit.barcode }}</p>
+																		<p>Catégorie:
+																			{{ produit.getCategorie.nom }}</p>
+																		<p>Prix:
+																			{{ produit.purchaseprice }}</p>
+																		{% if produit.etat is not null %}
+																			<p>Etat: En Stock</p>
+																		{% else %}
+																			<p>Etat: Hors Stock</p>
+																		{% endif %}
+																		<p>Description:
+																			{{ produit.descriptionproduct }}</p>
+																		{% if produit.getOffre != null %}
+																			<p>Offre:
+																				{{ produit.getOffre.pourcentage }}</p>
+																		{% endif %}
+																		<hr>
+																		<a href="/produit/liste">Retour</a>
 																	{% else %}
-																		<p>Etat: Hors Stock</p>
+																		<a href="/produit/liste">Retour</a>
+																		<p>La categorie n'existe pas.</p>
 																	{% endif %}
-																	<p>Description:
-																		{{ produit.descriptionproduct }}</p>
-																	{% if produit.getOffre != null %}
-																		<p>Offre:
-																			{{ produit.getOffre.pourcentage }}</p>
-																	{% endif %}
-																	<hr>
-																	<a href="/produit/liste">Retour</a>
-																{% else %}
-																	<a href="/produit/liste">Retour</a>
-																	<p>La categorie n'existe pas.</p>
-																{% endif %}
+																</div>
 															</div>
 														</div>
 													</div>
-												</div>
-												#}
+													#}
 
 	<div class="container-fluid pt-4 px-4">
 		<div class="row g-4">
@@ -106,7 +106,7 @@
 						<p>Barcode:
 							{{ produit.barcode }}</p>
 						<p>Catégorie:
-							{{ produit.getCategorie.nom }}</p>
+							{{ produit.getCategorie.titre }}</p>
 						<p>Prix:
 							{{ produit.purchaseprice }}</p>
 						{% if produit.etat is not null %}
